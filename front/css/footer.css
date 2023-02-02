@@ -1,0 +1,33 @@
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex:1;
+}
+
+footer{
+    background-color: var(--light-gray);
+    height: 3rem;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center;
+    height: 3rem; */
+    font-size: 1.6rem;
+    line-height: 3rem;
+    /* gap: 1rem; */
+}
+
+.author{
+    margin-right: 1rem;
+}

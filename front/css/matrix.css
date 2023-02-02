@@ -1,0 +1,154 @@
+/* 컨테이너 */
+.matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-left: 3px solid var(--dark-gray);
+    border-bottom: 3px solid var(--dark-gray);
+    position: relative;
+    margin: 1rem 4rem 4rem;
+  }
+  
+  .matrix-item {
+    width: 45%;
+    height: 30rem;
+    margin: 2rem 0;
+    border: 0.5px solid var(--dark-gray);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .matrix-container {
+      display: block;
+    }
+  
+    .matrix-item {
+      width: 90%;
+      margin: 0 auto 1rem;
+    }
+  
+    .urgency {
+      left: 45%;
+    }
+  }
+  
+  /* 헤더 */
+  
+  .matrix-item-header {
+    /* height: 30%; */
+    text-align: center;
+    background: var(--light-gray);
+    padding: 1rem 0;
+  }
+  
+  .matrix-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  
+  .matrix-input {
+    width: 90%;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    line-height: 1.8;
+  }
+  
+  /* 리스트 */
+  
+  .matrix-item-list {
+    /* header를 제외한 높이를 차지하고 오버시 스크롤 */
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .list-item {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px var(--light-gray) solid;
+    border-radius: 5px;
+  }
+  
+  .done-text-container {
+    flex: 1;
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+  
+  .todo-done {
+    /* width: 5%; */
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+  
+  .todo-done:checked + .todo-text {
+    text-decoration: line-through;
+  }
+  
+  .todo-text {
+    /* flex: 1 1 auto; */
+    flex: 1;
+    /* width: 0; */
+    padding-left: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .update-delete-container {
+    font-size: 1.6rem;
+  }
+  
+  .todo-update {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .todo-delete {
+    cursor: pointer;
+  }
+  
+  /* 오더 */
+  
+  #decide {
+    order: 1;
+  }
+  
+  #do {
+    order: 2;
+  }
+  
+  #delete {
+    order: 3;
+  }
+  
+  #delegate {
+    order: 4;
+  }
+  
+  /* 중요도, 긴급성 처리 */
+  
+  .urgency {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: -2.5rem;
+    /* left: 50%; */
+  }
+  
+  .importance {
+    position: absolute;
+    writing-mode: vertical-rl;
+    left: -3rem;
+    top: 50%;
+    font-size: 1.5rem;
+  }
+  
