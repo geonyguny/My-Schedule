@@ -9,7 +9,7 @@ exports.jwtMiddleware = async function (req, res, next) {
   if (!token) {
     return res.send({
       isSuccess: false,
-      code: 411,
+      code: 403,
       message: "로그인이 되어 있지 않습니다.",
     });
   }
@@ -22,7 +22,7 @@ exports.jwtMiddleware = async function (req, res, next) {
   } catch {
     return res.send({
       isSuccess: false,
-      code: 412,
+      code: 403,
       message: "토큰 검증 실패",
     });
   }

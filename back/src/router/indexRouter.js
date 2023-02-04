@@ -16,9 +16,9 @@ exports.indexRouter = function(app){
         },
         function (req, res, next) {
           console.log(2);
-        //   next();
+          next();
         },
-        function (req, res) {
+        function (req, res,next) {
           console.log(3);
         }
       );
